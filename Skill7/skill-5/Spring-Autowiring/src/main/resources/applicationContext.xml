@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="
+ http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Course Bean -->
+    <bean id="course" class="com.klu.Course">
+        <property name="id" value="32980"/>
+        <property name="course" value="Spring Core"/>
+        <property name="dateOfCompletion" value="25-Jan-2026"/>
+    </bean>
+
+    <!-- Student Bean -->
+    <bean id="student" class="com.klu.Student">
+        <property name="studentId" value="10"/>
+        <property name="studentName" value="Nihitha"/>
+        <property name="gender" value="Female"/>
+        <property name="course" ref="course"/>
+    </bean>
+
+</beans>
